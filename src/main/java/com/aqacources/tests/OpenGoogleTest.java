@@ -26,7 +26,7 @@ public class OpenGoogleTest {
         options.addArguments("disable-infobars");
 
         // Initialize path to ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "/Users/alla/Documents/chromedriver-2");
+        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver-2");
 
         // Initialize instance of ChromeDriver and add options
         driver = new ChromeDriver(options);
@@ -56,7 +56,8 @@ public class OpenGoogleTest {
         driver.findElement(By.name("btnK")).click();
 
         //Find needed link in search results
-        driver.findElement(By.xpath("//h3[contains(text(),'Test Automation vs. Automated Testing: The Differe')]")).click();
+       // driver.findElement(By.xpath("//h3[contains(text(),'Test Automation vs. Automated Testing: The Differe')]")).click();
+        driver.findElement(By.xpath("//cite[contains(text(),'https://www.qasymphony.com/blog/test-automation-au')]")).click();
 
     }
 
